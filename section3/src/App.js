@@ -30,6 +30,22 @@ const heading = (
   </h1>
 );
 
+const child = <div>child</div>;
+const parent = <div>{parent}</div>;
+
+const name = 'JSX';
+const heading2 = (
+  <h1>Hello, {name}</h1>
+);
+
+const list = (
+  <ul>
+    {[1, ,2, 3].map(num => <li>{num}</li>)}
+  </ul>
+);
+
+const img = <img src="..." />;
+
 function Hello(name) {
   if (typeof name === `string`) {
     return <h1>Hello, {name}</h1>;
@@ -74,6 +90,9 @@ class App extends Component {
         {element4}
         {wrap(element4)}
         {wrap(heading)}
+        {heading2}
+        {list}
+        {img}
       </div>
     );
   }

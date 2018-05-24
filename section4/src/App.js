@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import TodoInput from './TodoInput';
 import TodoList from './TodoList';
 
-import logo from './logo.svg';
-import './App.css';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -46,15 +43,11 @@ class App extends Component {
   }
 
   render() {
-    const tasks = [
-      { title: 'Todo1つ目', id: 0 },
-      { title: 'Todo2つ目', id: 1 }
-    ];
     return (
-      <div>
+      <div className="App">
         <h1>TODO App</h1>
-        <TodoInput addTodo={this.addTodo}/>
         <button onClick={this.resetTodo}>リセット</button>
+        <TodoInput addTodo={this.addTodo}/>
         <TodoList tasks={this.state.tasks} />
       </div>
     );
